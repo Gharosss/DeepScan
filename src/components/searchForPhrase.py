@@ -32,17 +32,27 @@ def search(filePath):
                         Findings.append("Found in: " + filePath)
                         Findings.append("Page: " + str(actualPage))
 
-def checkForPhrase(directory):
+listofFiles = []
+def findFiles(directory):
+    global listofFiles
     try:
-        everyTempFile = os.listdir(directory)
-        for file in everyTempFile:
+        filesInCurrentDir = os.listdir(directory)
+        for file in filesInCurrentDir:
             filePath = os.path.join(directory, file)
             if os.path.isfile(filePath):
-                search(filePath)
+                listofFiles.append(filePath)
             if os.path.isdir(filePath):
-                checkForPhrase(filePath)
+                findFiles(filePath)
     except Exception as e:
         print(f"An error occurred: {str(e)}")
+
+def checkForPhrase(directory):
+    global listofFiles
+    findFiles(directory)
+    numberOfFilesFound = len(listofFiles)
+    for i in range(numberOfFilesFound):
+        search(listofFiles[i])
+    
 
 def showFindings():
     root = tk.Tk()
@@ -68,7 +78,7 @@ def getUserInput():
     root.destroy()
     
 
-validExtensions = [".yml", ".txt"]  
+validExtensions = [".yml", ".txt", ".json"]  
 Findings = []
 mainDirectory, phrase = "", ""
 getUserInput()

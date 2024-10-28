@@ -1,0 +1,88 @@
+.SearchArea{
+    width: 400px;
+    height: 200px;
+    background-color: white;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.SearchAreaButton{
+    font-size: 15px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin-right: 5px;
+    cursor: pointer;
+    border: 1px solid black;
+}
+
+.SearchAreaButton:hover{
+    background-color: rgb(230, 230, 230);
+}
+
+
+#SearchAreaText{
+    text-align: center;
+    margin: 10px;
+    height: 15px;
+}
+
+.SearchAreaTop{
+    display:flex;
+    width: 90%;
+    padding: 5px 5%;
+    justify-content: space-between;
+}
+
+.InputArea{
+    text-align: center;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+.FilterArea{
+    border: 1px solid black;
+    border-radius: 5px;
+
+}
+
+.FileTypeArea{
+    display: flex;
+    flex-direction: row;
+    padding: 5px 10px;
+}
+
+.FileType{
+    border: 1px solid black;
+    border-radius: 5px;
+    margin: 5px;
+    padding: 3px 8px;
+    cursor: pointer;
+}
+.FileType:hover{
+    background-color: rgb(242, 242, 242);
+}
+
+.SortByArea{
+    display: flex;
+    flex-direction: row;
+    padding: 5px 10px;
+    justify-content:center;
+    
+}
+
+.SelectInput {
+    width: 120px;
+    padding: 5px;
+    border: 1px solid black;
+    border-radius: 5px;
+    margin-left: 10px;
+}
+
+.SelectOption{
+    margin-left: 5px;
+    cursor: pointer;
+}

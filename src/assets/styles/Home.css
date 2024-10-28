@@ -1,0 +1,14 @@
+.HomeDiv {
+    background-color: gray;
+    width: 100vw;
+    height: 100vh;
+}
+
+.top-half{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30vh;
+    background-color: white;
+    border-bottom: 2px solid black;
+}
